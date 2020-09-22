@@ -1,0 +1,24 @@
+function muunnaSalasanaksi()
+{
+  var pw = '';
+  var eka, toka;
+  pw = document.getElementById('salari').value;
+  alert(pw);
+  var taulu = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j','k', 'l', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u','v', 'x', 'y', 'z', 'å', 'ä', 'ö', 'w'];
+  var temp = [];
+  var lop='';
+  for(var s = 0; s < pw.length; s++)
+  {
+    eka = pw[s];
+    //alert[pw];
+    //alert[eka];
+    temp.push(eka);
+    //alert(eka);
+    var lisa = Math.floor(Math.random()*taulu.length);
+    toka = taulu[lisa];
+    temp.push(toka);
+    //alert(toka);
+  }
+  lop = temp.join('');
+  document.getElementById('salasana').innerHTML = lop;
+}
