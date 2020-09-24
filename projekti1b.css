@@ -1,0 +1,20 @@
+body {
+background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm85-tong-27_2.jpg?bg=transparent&con=3&cs=srgb&dpr=1&fm=jpg&ixlib=php-3.1.0&q=80&usm=15&vib=3&w=1300&s=c96314d018408cb0cdead98800dfc06e");
+background-position: center;
+background-size: cover;
+}
+h2
+{
+  color: #DC143C;
+}
+h2
+{
+  font-family: "Brush Script Std";
+}
+h2
+{
+  font-size: 35px;
+}
+p.thick {
+  font-weight: bold;
+}
