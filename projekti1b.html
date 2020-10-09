@@ -75,6 +75,17 @@ input[type=number], select
  box-sizing: border-box;
  background-color: 	#FFFF66;
 }
+input[type=email], select
+{
+  width: 100%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ display: inline-block;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ box-sizing: border-box;
+ background-color: 	#FFFF66;
+}
   </style>
 <link rel="stylesheet" href="projekti0909.css">
 </head>
@@ -86,7 +97,7 @@ input[type=number], select
 <form action="/action_page.php">
     <form>
   <label for="username">Username:</label><br>
-  <input type="text" id="username" name="username" required><br>
+  <input type="text" id="username" name="username" required minlength="3" required><br>
   <label for="pwd">Password:</label><br>
   <input type="password" id="pwd" name="pwd" required minlength="15" required>
 
@@ -94,18 +105,36 @@ input[type=number], select
   <input type="text" id="fname" name="fname" value="Etunimesi" required minlength="3" required><br>
 
   <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Sukunimesi" required><br>
+  <input type="text" id="lname" name="lname" value="Sukunimesi" required minlength="3" required><br>
 
   <label for="email">email:</label><br>
-  <input type="text" id="email" name="email" value="example@gmail.com" required><br>
+  <input type="email" id="email" name="email" value="example@gmail.com" required><br>
 
   <label for="phone number">Phone number:</label><br>
-  <input type="number" id="phone number" name="phone number" value="Puhelin numerosi" required><br>
+  <input type="number" id="phone number" name="phone number" value="Puhelin numerosi" required minlength="7" required><br>
   <p> Please enter your birthday here</p>
   <label for="date"></label>
-  <input type="date" name="date" id="date"required><br>
+  <input type="date" name="date" id="date" required><br>
 
-  <p>Please pick your gender in the checkboxes below.</p>
+<p>Mikä on lempi aineesi Keudassa.</p>
+  <input list="Lukuaineet" name="Lukuaineet" required>
+  <datalist id="Lukuaineet">
+    <option value="Matematiikka">
+    <option value="Äidinkieli">
+    <option value="Englanti">
+    <option value="Ruotsi">
+    <option value="FyKe">
+  </datalist>
+
+<p>Suositteletko keudaa ystävillesi</p>
+<input type="radio" id="kyllä" name="kyllä" value="kyllä">
+<label for="kyllä">Kyllä</label>
+<input type="radio" id="kyllä" name="en" value="en">
+<label for="en">En</label>
+<input type="radio" id="en osaa sanoa" name="en osaa sanoa" value="en osaa sanoa">
+<label for="en osaa sanoa"> En osaa sanoa</label>
+
+ <p>Please pick your gender in the checkboxes below.</p>
   <input type="checkbox" id="male" name="male" value="male">
   <label for="male">Male</label><br>
   <input type="checkbox" id="female" name="female" value="female">
@@ -119,5 +148,4 @@ input[type=number], select
   <input type="submit" value="Submit">
 </article>
 </form>
-
 </html>
